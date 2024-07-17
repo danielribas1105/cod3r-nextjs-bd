@@ -38,3 +38,5 @@ const usuarios: Usuario[] = [
         "senha": "123423"
     }
 ]
+
+export default usuarios
