@@ -1,13 +1,14 @@
 import { Usuario } from "@/core/models/Usuario";
-import { IconCancel, IconDeviceFloppy } from "@tabler/icons-react";
+import { IconCancel, IconDeviceFloppy, IconTrash } from "@tabler/icons-react";
 import InputTexto from "../shared/inputTexto";
 import Botao from "../shared/botao";
 
 export interface FormularioUsuarioProps {
-    usuario: Usuario
-    onChange?: (usuario: Usuario) => void
+    usuario: Partial<Usuario>
+    onChange?: (usuario: Partial<Usuario>) => void
     salvar: () => void
     cancelar: () => void
+    excluir: () => void
 }
 
 export default function FormularioUsuario(props: FormularioUsuarioProps) {
@@ -38,6 +39,11 @@ export default function FormularioUsuario(props: FormularioUsuarioProps) {
                     icone={IconCancel} 
                     texto="Cancelar"
                     clique={props.cancelar}
+                />
+                <Botao className={'ml-4 hover:bg-red-900 hover:border-red-700'} 
+                    icone={IconTrash} 
+                    texto="Excluir"
+                    clique={props.excluir}
                 />
             </div>
         </div>

@@ -5,7 +5,7 @@ export interface BotaoProps {
     icone: ElementType
     className?: string
     texto: string
-    clique: () => void
+    clique?: () => void
 }
 
 export default function Botao(props: BotaoProps) {

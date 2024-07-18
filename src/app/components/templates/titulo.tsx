@@ -16,7 +16,6 @@ export default function Titulo(props: TituloProps) {
                 <h1 className="text-2xl font-black">{props.titulo}</h1>
                 <h2 className="text-zinc-500">{props.subtitulo}</h2>
             </div>
-            <Botao className={'ml-4 hover:bg-blue-900 hover:border-blue-700'} icone={IconSquareRoundedPlus} texto="Adicionar usuário"/>
         </div>
     )
 }
